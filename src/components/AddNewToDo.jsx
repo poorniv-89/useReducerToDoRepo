@@ -3,24 +3,20 @@ import { useState } from "react";
 export default function AddNewToDo({ dispatch }) {
     const [item, setItem] = useState("");
 
-    function handleChange(e) {
-        setItem(e.target.value);
-    }
-
-    function handleClick() {
-            dispatch({ type: "addItem", payload: { text: item } });
-            setItem(""); 
-    }
-
     return (
         <div>
             <input
                 type="text"
                 value={item}
-                onChange={handleChange}
+                onChange={(e) => { setItem(e.target.value) }}
                 placeholder="Add task..."
             />
-            <button onClick={handleClick}>Add</button>
+            <button onClick={() => {
+                if (!item) {
+                    alert("Add something to the to-do list! It cannot be blank!");
+                    return;
+                } dispatch({ type: "addItem", text: item }); setItem("")
+            }}>Add</button>
         </div>
     );
 }

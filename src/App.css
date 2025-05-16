@@ -1,6 +1,58 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f6f6f6;
+  padding: 20px;
   text-align: center;
+}
+
+.toDoListCtnr {
+  max-width: 50%;
+  height: 70vh;
+  margin: auto;
+  margin-top: 2rem;
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.toDoListCtnr ul {
+  list-style: none;
+  padding: 0;
+}
+
+.toDoListCtnr li {
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+/* .toDoListCtnr li:last-child {
+  border-bottom: none;
+} */
+
+input {
+  padding: 6px;
+  font-size: 1rem;
+  border: 1px solid #0e06067f;
+  border-radius: 6px;
+  margin-top: 3rem;
+  margin-right: 10px;
+}
+
+button {
+  padding: 6px 10px;
+  margin-left: 0.5rem;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #007bff;
+  color: rgb(6, 1, 1);
+  transition: background-color 0.2s ease;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
 }
