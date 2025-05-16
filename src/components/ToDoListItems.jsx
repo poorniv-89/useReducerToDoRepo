@@ -22,7 +22,7 @@ export default function ToDoListItems() {
                                     dispatch({ type: "isCompleted", id: item.id });
                                 }}
                             />
-                            {!item.completed && item.isEditing ? (
+                            { item.isEditing ? (
                                 <>
                                     <input
                                         type="text"
